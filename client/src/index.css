@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(340, 82%, 52%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Candy Theme Colors */
+  --candy-pink: hsl(340, 82%, 52%);
+  --candy-purple: hsl(270, 70%, 55%);
+  --candy-blue: hsl(180, 65%, 55%);
+  --candy-yellow: hsl(50, 90%, 60%);
+  --candy-orange: hsl(25, 95%, 53%);
+  --candy-mint: hsl(130, 65%, 75%);
+  --candy-gradient: linear-gradient(135deg, hsl(340, 82%, 52%), hsl(270, 70%, 55%), hsl(180, 65%, 55%));
+  --candy-gradient-2: linear-gradient(135deg, hsl(50, 90%, 60%), hsl(25, 95%, 53%), hsl(130, 65%, 75%));
+  
+  /* Glass Effects */
+  --glass-bg: hsla(0, 0%, 100%, 0.1);
+  --glass-border: hsla(0, 0%, 100%, 0.2);
+  --glass-backdrop: blur(10px);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(340, 82%, 52%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  
+  /* Dark mode glass effects */
+  --glass-bg: hsla(0, 0%, 0%, 0.2);
+  --glass-border: hsla(0, 0%, 100%, 0.1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', cursive;
+  }
+}
+
+@layer components {
+  .candy-gradient {
+    background: var(--candy-gradient);
+  }
+  
+  .candy-gradient-2 {
+    background: var(--candy-gradient-2);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, var(--candy-pink), var(--candy-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-backdrop);
+    border: 1px solid var(--glass-border);
+  }
+  
+  .candy-divider {
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .candy-divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--candy-pink) 0px,
+      var(--candy-pink) 20px,
+      var(--candy-purple) 20px,
+      var(--candy-purple) 40px,
+      var(--candy-blue) 40px,
+      var(--candy-blue) 60px,
+      var(--candy-yellow) 60px,
+      var(--candy-yellow) 80px
+    );
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  }
+
+  .lollipop-loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(var(--candy-pink), var(--candy-purple), var(--candy-blue), var(--candy-yellow), var(--candy-pink));
+    position: relative;
+  }
+
+  .lollipop-loader::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: hsl(30, 67%, 36%);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--candy-pink);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--candy-purple);
+}
+
+/* Loading Screen */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--candy-gradient);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .candy-divider {
+    height: 40px;
+  }
+  
+  .text-gradient {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--candy-pink);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .candy-gradient,
+  .candy-gradient-2 {
+    background: var(--candy-pink) !important;
+    color: white !important;
+  }
+}
