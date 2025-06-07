@@ -48,7 +48,7 @@ export function TokenPriceWidget() {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <div className="text-2xl">🍬</div>
-              <span className="font-bold text-foreground">SWEET/USD</span>
+              <span className="font-bold text-foreground">Sweetcoin/SOL</span>
             </div>
             <div className="text-green-500 text-sm font-semibold">
               {tokenData?.change24h || "+12.5% 24h"}
