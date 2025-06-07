@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
 :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
@@ -38,6 +44,11 @@
   --glass-bg: hsla(0, 0%, 100%, 0.1);
   --glass-border: hsla(0, 0%, 100%, 0.2);
   --glass-backdrop: blur(10px);
+  
+  /* Primary Colors Updated for Better Candy Theme */
+  --primary: hsl(340, 82%, 52%);
+  --secondary: hsl(270, 70%, 55%);
+  --accent: hsl(50, 90%, 60%);
 }
 
 .dark {

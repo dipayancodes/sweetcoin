@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { LoadingScreen } from "@/components/ui/loading-screen";
+import { ParticleBackground } from "@/components/ui/particle-background";
 import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { CandyDivider } from "@/components/ui/candy-divider";
@@ -29,19 +30,30 @@ export default function Home() {
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
-      <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 relative">
+        <ParticleBackground />
         <Navigation />
         
         <main>
-          <Hero />
+          <section id="home">
+            <Hero />
+          </section>
           <CandyDivider />
-          <Tokenomics />
+          <section id="tokenomics">
+            <Tokenomics />
+          </section>
           <CandyDivider className="rotate-180" />
-          <Roadmap />
+          <section id="roadmap">
+            <Roadmap />
+          </section>
           <CandyDivider />
-          <HowToBuy />
+          <section id="how-to-buy">
+            <HowToBuy />
+          </section>
           <CandyDivider className="rotate-180" />
-          <News />
+          <section id="news">
+            <News />
+          </section>
           <CandyDivider />
           <Newsletter />
         </main>
