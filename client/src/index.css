@@ -178,6 +178,42 @@ html {
     animation: pulse 3s infinite;
   }
 
+  /* Enhanced Glassmorphism Effects */
+  .glass-light {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-heavy {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Custom Shadow Effects */
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(219, 39, 119, 0.3);
+  }
+
+  .shadow-candy {
+    box-shadow: 
+      0 4px 14px 0 rgba(219, 39, 119, 0.2),
+      0 0 30px rgba(139, 69, 195, 0.15);
+  }
+
+  .shadow-3xl {
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 40px rgba(219, 39, 119, 0.1);
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
