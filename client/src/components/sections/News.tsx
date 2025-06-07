@@ -2,7 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import type { NewsArticle } from "@shared/schema";
@@ -34,7 +40,10 @@ export function News() {
   };
 
   return (
-    <section id="news" className="py-20 px-4 bg-gradient-to-br from-background via-background/95 to-primary/5">
+    <section
+      id="news"
+      className="py-20 px-4 bg-gradient-to-br from-background via-background/95 to-primary/5"
+    >
       <div className="max-w-6xl mx-auto">
         <motion.div
           variants={staggerContainer}
@@ -53,7 +62,8 @@ export function News() {
             variants={fadeInUp}
             className="text-xl text-muted-foreground max-w-3xl mx-auto"
           >
-            Stay updated with the latest developments, partnerships, and exciting announcements from the SweetCoin ecosystem.
+            Stay updated with the latest developments, partnerships, and
+            exciting announcements from the SweetCoin ecosystem.
           </motion.p>
         </motion.div>
 
@@ -101,7 +111,7 @@ export function News() {
                       </Badge>
                     </div>
                   )}
-                  
+
                   <CardHeader className="pb-3">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                       <Calendar className="w-4 h-4" />
@@ -111,12 +121,12 @@ export function News() {
                       {article.title}
                     </CardTitle>
                   </CardHeader>
-                  
+
                   <CardContent className="pt-0">
                     <CardDescription className="text-base leading-relaxed line-clamp-3 mb-4">
                       {article.excerpt}
                     </CardDescription>
-                    
+
                     <Button
                       variant="outline"
                       size="sm"

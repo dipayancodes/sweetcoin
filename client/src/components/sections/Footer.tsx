@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
 const socialLinks = [
-  { icon: "📱", label: "Telegram", href: "https://t.me/sweetcoin" },
-  { icon: "🐦", label: "Twitter", href: "https://twitter.com/sweetcoin" },
-  { icon: "💬", label: "Discord", href: "https://discord.gg/sweetcoin" },
-  { icon: "🔗", label: "Solana Explorer", href: "#" },
+  { icon: "📱", label: "Telegram", href: "https://t.me/sweetcoinofficials" },
+  { icon: "🐦", label: "Twitter", href: "https://x.com/SweetCoin27144" },
+  { icon: "💬", label: "Discord", href: "https://discord.gg/Gj2nq7Cu5D" },
+  { icon: "🔗", label: "DEX Screener", href: "#" },
 ];
 
 const quickLinks = [
@@ -62,10 +62,13 @@ export function Footer() {
               >
                 🍬
               </motion.div>
-              <span className="text-2xl font-bold text-gradient">SweetCoin</span>
+              <span className="text-2xl font-bold text-gradient">
+                SweetCoin
+              </span>
             </div>
             <p className="text-muted-foreground">
-              The sweetest token in DeFi, bringing joy and profits to every holder.
+              The sweetest token in DeFi, bringing joy and profits to every
+              holder.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
@@ -83,7 +86,9 @@ export function Footer() {
 
           {/* Quick Links */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-foreground font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-foreground font-bold text-lg mb-4">
+              Quick Links
+            </h3>
             <div className="space-y-2">
               {quickLinks.map((link) => (
                 <button
@@ -99,7 +104,9 @@ export function Footer() {
 
           {/* Resources */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-foreground font-bold text-lg mb-4">Resources</h3>
+            <h3 className="text-foreground font-bold text-lg mb-4">
+              Resources
+            </h3>
             <div className="space-y-2">
               {resources.map((link) => (
                 <a
@@ -117,14 +124,17 @@ export function Footer() {
           <motion.div variants={fadeInUp}>
             <h3 className="text-foreground font-bold text-lg mb-4">Contact</h3>
             <div className="space-y-2 text-muted-foreground">
-              <div>partnerships@sweetcoin.com</div>
-              <div>support@sweetcoin.com</div>
-              <div>
+              <div>sweetcoin.dev@gmail.com</div>
+              {/* <div>support@sweetcoin.com</div> */}
+              {/* <div>
                 Solana Explorer:{" "}
-                <a href="#" className="text-primary hover:text-primary/80 transition-colors">
+                <a
+                  href="#"
+                  className="text-primary hover:text-primary/80 transition-colors"
+                >
                   View Contract
                 </a>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </motion.div>
@@ -139,7 +149,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2024 SweetCoin. All rights reserved.
+              © 2025 SweetCoin. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               {legalLinks.map((link) => (
@@ -159,9 +169,11 @@ export function Footer() {
             variants={fadeInUp}
           >
             <p className="text-xs text-muted-foreground text-center leading-relaxed">
-              <strong>Disclaimer:</strong> SweetCoin is a meme token created for entertainment purposes.
-              Cryptocurrency investments carry high risk and you should only invest what you can afford to lose.
-              This is not financial advice. Please do your own research before investing.
+              <strong>Disclaimer:</strong> SweetCoin is a meme token created for
+              entertainment purposes. Cryptocurrency investments carry high risk
+              and you should only invest what you can afford to lose. This is
+              not financial advice. Please do your own research before
+              investing.
             </p>
           </motion.div>
         </motion.div>
