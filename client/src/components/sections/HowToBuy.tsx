@@ -128,7 +128,7 @@ export function HowToBuy() {
               </h3>
               <div className="flex items-center justify-center space-x-3 bg-background/10 p-4 rounded-lg mb-4">
                 <code className="text-sm font-mono break-all text-foreground">
-                  {contractAddress}
+                  {contractAddress}                  
                 </code>
                 <Button
                   variant="outline"
